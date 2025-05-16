@@ -1,11 +1,39 @@
 /* Grundlegende Layout-Stile */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --header-bg: #222;
+  --nav-link-color: white;
+  --hero-bg:#e0e0e0;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --header-bg: #111;
+  --nav-link-color: #eee;
+  --hero-bg:#474747;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 30;
 }
 
 .container {
@@ -17,8 +45,8 @@ body {
 
 /* Header */
 .site-header {
-  background-color: #222;
-  color: white;
+  background-color: var(--header-bg);
+  color: var(--nav-link-color);
   padding: 1rem 0;
 }
 
@@ -34,7 +62,7 @@ body {
 }
 
 .main-nav a {
-  color: white;
+  color: var(--nav-link-color);
   text-decoration: none;
 }
 
@@ -44,7 +72,7 @@ body {
 
 /* Hero */
 .hero {
-  background-color: #e0e0e0;
+  background-color: var(--hero-bg);
   padding: 3rem 0;
   text-align: center;
 }
