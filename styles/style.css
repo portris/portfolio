@@ -1,0 +1,49 @@
+/* Grundlegende Layout-Stile */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background-color: #222;
+  color: white;
+  padding: 1rem 0;
+}
+
+.site-header .logo {
+  margin: 0;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  background-color: #e0e0e0;
+  padding: 3rem 0;
+  text-align: center;
+}
