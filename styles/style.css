@@ -104,25 +104,39 @@ body.dark {
 @media (max-width: 768px) {
   .main-nav ul {
     flex-direction: column;
-    background-color: #333;
+    background-color: var(--header-bg);
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
-    display: none;
-    z-index: 10; /* unter dem Button */
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    z-index: 10;
+    border-radius: 0 0 12px 12px;
   }
 
   .main-nav ul.show {
-    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
   }
 
   .menu-toggle {
     display: block;
     position: relative;
-    z-index: 20; /* über dem Menü */
+    z-index: 20;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--nav-link-color);
+    cursor: pointer;
   }
 }
+
 /* Styling für Projects Section*/
 .projects-section {
   padding: 4rem 0;
@@ -266,4 +280,23 @@ body.dark .contact-form button:hover {
 
 .site-footer .social-links a:hover {
   text-decoration: underline;
+}
+
+/*Animationen*/
+* {
+  transition: background-color 0.3s ease;
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

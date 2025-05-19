@@ -1,4 +1,5 @@
 const menuToggle = document.getElementById('menu-toggle');
+const menuIcon = document.getElementById('menu-icon');
 const navMenu = document.querySelector('.main-nav ul');
 
 menuToggle.addEventListener('click', () => {
@@ -6,11 +7,11 @@ menuToggle.addEventListener('click', () => {
 
   // Symbol wechseln
   if (navMenu.classList.contains('show')) {
-    menuToggle.textContent = '✖'; // Schließen
-    menuToggle.setAttribute('aria-label', 'Menü schließen');
+    menuIcon.classList.remove('fa-bars');
+    menuIcon.classList.add('fa-times');
   } else {
-    menuToggle.textContent = '☰'; // Öffnen
-    menuToggle.setAttribute('aria-label', 'Menü öffnen');
+    menuIcon.classList.remove('fa-times');
+    menuIcon.classList.add('fa-bars');
   }
 });
 
