@@ -89,27 +89,36 @@
         </div>
     </section>
 
-        <section id="contact">
+    <section id="contact" class="contact-section">
+        <div class="container">
             <h2>Kontakt</h2>
-            <form>
-                <label for="name">Name:</label>
+
+            <form class="contact-form">
+                <label for="name">Name</label>
                 <input type="text" id="name" name="name" required />
 
-                <label for="email">E-Mail:</label>
+                <label for="email">E-Mail</label>
                 <input type="email" id="email" name="email" required />
 
-                
-                <label for="message">Nachricht:</label>
-                <textarea id="message" name="message" rows="4" required ></textarea>
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
                 <button type="submit">Senden</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 
-    <footer>
-        <p>&copy; 2025 Richard Franken</p>
-    </footer>
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; <span id="year"></span> Richard Franken. Alle Rechte vorbehalten.</p>
+        <div class="social-links">
+            <a href="https://github.com/portris" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/deinname" target="_blank">LinkedIn</a>
+            <!-- Weitere Links möglich -->
+        </div>
+    </div>
+</footer>
 
     <!--JavaScript-->
     <script src="scripts/main.js"></script>

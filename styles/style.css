@@ -5,6 +5,8 @@
   --header-bg: #222;
   --nav-link-color: white;
   --hero-bg:#e0e0e0;
+  --accent-color: #007bff; 
+  --accent-hover: #0056b3;
 }
 
 body {
@@ -22,6 +24,8 @@ body.dark {
   --header-bg: #111;
   --nav-link-color: #eee;
   --hero-bg:#474747;
+  --accent-color: #66aaff;
+  --accent-hover: #3388ff;
 }
 
 .theme-toggle {
@@ -172,4 +176,94 @@ body.dark {
 
 body.dark .project-card {
   background-color: #1e1e1e;
+}
+/*Kontaktformular Styling*/
+.contact-section {
+  padding: 4rem 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.contact-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode */
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background-color: #1e1e1e;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark .contact-form button {
+  background-color: var(--accent-color);
+}
+
+body.dark .contact-form button:hover {
+  background-color: #3388ff;
+}
+
+/*Styling für den Footer*/
+.site-footer {
+  background-color: var(--header-bg);
+  color: var(--nav-link-color);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer .social-links {
+  margin-top: 0.5rem;
+}
+
+.site-footer .social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-weight: bold;
+}
+
+.site-footer .social-links a:hover {
+  text-decoration: underline;
 }

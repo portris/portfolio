@@ -33,3 +33,6 @@ themeToggle.addEventListener('click', () => {
 
   themeToggle.textContent = isDark ? '☀️' : '🌙';
 });
+
+// Jahr für Footer aktualisieren
+document.getElementById('year').textContent = new Date().getFullYear();
