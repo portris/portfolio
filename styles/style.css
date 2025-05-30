@@ -5,8 +5,8 @@
   --header-bg: #222;
   --nav-link-color: white;
   --hero-bg:#e0e0e0;
-  --accent-color: #007bff; 
-  --accent-hover: #0056b3;
+  --accent-color: #21a327; 
+  --accent-hover: #649c67;
 }
 
 body {
@@ -24,8 +24,8 @@ body.dark {
   --header-bg: #111;
   --nav-link-color: #eee;
   --hero-bg:#474747;
-  --accent-color: #66aaff;
-  --accent-hover: #3388ff;
+  --accent-color: #21a327; 
+  --accent-hover: #649c67;
 }
 
 .theme-toggle {
